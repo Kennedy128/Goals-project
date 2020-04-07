@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Goal } from '../goal';
+import { Goals } from '../goals';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,14 @@ export class GoalService {
   getGoals(){
     return this.goals;
   }
+  getGoal(id){
+    for (let goal of []){
+      if (goal.id == id){
+        return goal;
+      }
+    }
+  }
+
   addGoal(goal){
     let goalLength = this.goals.length;
     let goalObj= new Goal(goal.id=goalLength+1,goal.name,goal.description,goal.completeDate=new Date(goal.completeDate))

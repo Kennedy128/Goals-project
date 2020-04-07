@@ -13,6 +13,9 @@ import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { GoalFormComponent } from './goal-form/goal-form.component';
 import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {RoutingModule} from './routing/routing.module'
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -23,12 +26,15 @@ import { AboutComponent } from './about/about.component';
     StrikethroughDirective,
     DateCountPipe,
     GoalFormComponent,
-    AboutComponent
+    AboutComponent,
+    NavbarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RoutingModule,
     HttpClientModule,
     NgProgressModule.forRoot(),
     NgProgressHttpClientModule
